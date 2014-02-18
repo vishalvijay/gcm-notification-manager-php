@@ -1,0 +1,13 @@
+CREATE TABLE notifications(
+	id int(11) primary key NOT NULL AUTO_INCREMENT,
+	title varchar(100) not null,
+	message varchar(500) not null,
+	timeofinsertion timestamp default now(),
+	type int(1) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS `gcm_users` (
+  `android_id` varchar(255) primary key NOT NULL,
+  `gcm_regid` text NOT NULL,
+  `created_at` timestamp default now()
+);
